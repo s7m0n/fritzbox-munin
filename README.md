@@ -71,6 +71,10 @@ If you are using the scripts on a different Fritz!Box model please let me know b
   fritzbox\_wifi\_devices shows you the number of connected wifi clients (requires username & password) (language dependant, see below).
   ![http://i.imgur.com/lqvK1b2.png](http://i.imgur.com/lqvK1b2.png)
 
+## fritzbox\_ahapowertemp
+
+fritzbox\_ahapowertemp shows you the power consumption from home automation devices and ambient temperature reading 
+
 ## Installation & Configuration
 
 1. Pre-requesites for the fritzbox\_traffic and fritzbox\_uptime plugins are the [fritzconnection](https://pypi.python.org/pypi/fritzconnection) and [requests](https://pypi.python.org/pypi/requests) package. To install it
@@ -90,13 +94,14 @@ If you are using the scripts on a different Fritz!Box model please let me know b
         env.fritzbox_username <fritzbox_username>
         env.fritzbox_password <fritzbox_password>
         env.traffic_remove_max true # if you do not want the possible max values
+        env.configured_ahapowertemp_device_names <device name> # if using ahapowertemp plugin you can specify which devices to read power and temperature information 
         host_name fritzbox
 
-5. Create symbolic links to `/etc/munin/plugins`.
+6. Create symbolic links to `/etc/munin/plugins`.
 
-6. Restart the munin-node daemon: `/etc/init.d/munin-node restart`.
+7. Restart the munin-node daemon: `/etc/init.d/munin-node restart`.
 
-7. Done. You should now start to see the charts on the Munin pages.
+8. Done. You should now start to see the charts on the Munin pages.
 
 ## Localization
 
