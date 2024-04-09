@@ -52,8 +52,7 @@ def get_power_consumption(configured_device_names):
 
 def print_config():
     print("graph_title AVM Home Automation Consumption")
-    print("graph_vlabel %")
-    print("graph_category system")
+    print("graph_category sensors")
     for device_name in configured_device_names:
         print(f"{device_name}power.label {device_name} Power in W")
         print(f"{device_name}power.type GAUGE")
@@ -67,6 +66,7 @@ def print_config():
         print(f"{device_name}temp.min 0")
         print(f"{device_name}temp.max 100")
         print(f"{device_name}temp.info Temperature of {device_name}")
+    print("graph_vlabel Power in W | Temperature in °C")
     if os.environ.get("host_name"):
         print("host_name " + os.environ["host_name"])
 
