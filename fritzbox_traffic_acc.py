@@ -86,6 +86,10 @@ def print_values():
         state["total_down"] += down_diff
         state["total_up"] += up_diff
 
+        # update last to current
+        state["last_down"] = down_now
+        state["last_up"] = up_now
+
         # Convert to MB or GB before printing
         print(f"total_down.value {state['total_down'] / UNIT_DIVISOR:.2f}")
         print(f"total_up.value {state['total_up'] / UNIT_DIVISOR:.2f}")
