@@ -73,7 +73,12 @@ If you are using the scripts on a different Fritz!Box model please let me know b
 
 ## fritzbox\_ahapowertemp
 
+ADDED
 fritzbox\_ahapowertemp shows you the power consumption from home automation devices and ambient temperature reading 
+
+## fritzbox\fritzbox_traffic_acc 
+ADDED NEW
+fritzbox\fritzbox_traffic_acc shows accumulated traffic of the day to give an overview of daily consumption
 
 ## Installation & Configuration
 
