@@ -36,7 +36,7 @@ def print_values():
     except Exception as e:
         sys.exit("Couldn't get connection uptime")
 
-    uptime = fs.uptime
+    uptime = fs.connection_uptime
     print("uptime.value %.2f" % (int(uptime) / 86400.0))
 
 
